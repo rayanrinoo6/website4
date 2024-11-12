@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأنشطة الاقتصادية في الوطن العربي</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            margin: auto;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+        h2 {
+            color: #444;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+            color: #444;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        .content {
+            display: none;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+            font-size: 0.9em;
+        }
+        .quiz-section {
+            margin-top: 20px;
+        }
+        .quiz-question {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        .quiz-buttons button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>الأنشطة الاقتصادية في الوطن العربي</h1>
+        
+        <button onclick="showContent('importance')">أهمية الأنشطة الاقتصادية</button>
+        <button onclick="showContent('types')">أنواع الأنشطة الاقتصادية</button>
+        <button onclick="showContent('quiz')">اختبار صح أم خطأ</button>
+
+        <div id="importance" class="content">
+            <h2>أهمية الأنشطة الاقتصادية</h2>
+            <p>
+                تلعب الأنشطة الاقتصادية دورًا رئيسيًا في دعم اقتصاد الوطن العربي وتحقيق التنمية. من أبرز الفوائد:
+            </p>
+            <ul>
+                <li>تحقيق النمو الاقتصادي وزيادة الإنتاج المحلي.</li>
+                <li>خلق فرص عمل وتقليل البطالة.</li>
+                <li>تحسين مستوى المعيشة وتوفير الموارد الأساسية للسكان.</li>
+                <li>تعزيز التعاون الاقتصادي بين الدول العربية.</li>
+            </ul>
+        </div>
+
+        <div id="types" class="content">
+            <h2>أنواع الأنشطة الاقتصادية</h2>
+            <p>تشمل الأنشطة الاقتصادية في الوطن العربي مجالات متنوعة، ومن أبرزها:</p>
+            <ul>
+                <li><strong>الزراعة:</strong> تشمل زراعة المحاصيل مثل القمح والزيتون، وتربية الماشية لتلبية احتياجات السكان.</li>
+                <li><strong>الصناعة:</strong> مثل صناعة النفط والبتروكيماويات والمعادن، التي تشكل جزءًا كبيرًا من اقتصادات بعض الدول العربية.</li>
+                <li><strong>السياحة:</strong> قطاع رئيسي يسهم في تنويع الاقتصاد وجذب الاستثمار، خاصة في دول مثل مصر ولبنان والمغرب.</li>
+                <li><strong>التجارة:</strong> تشمل التجارة الداخلية والخارجية للسلع والخدمات وتدعم اقتصاديات الدول العربية عبر استيراد وتصدير السلع.</li>
+                <li><strong>التمويل والخدمات المصرفية:</strong> من القطاعات الهامة التي تدعم المشاريع والاستثمار من خلال البنوك والمؤسسات المالية.</li>
+                <li><strong>تكنولوجيا المعلومات:</strong> قطاع يشهد نموًا كبيرًا ويشمل تطوير البنية التحتية الرقمية وتحسين خدمات الإنترنت والاتصالات.</li>
+            </ul>
+        </div>
+
+        <div id="quiz" class="content quiz-section">
+            <h2>اختبار صح أم خطأ</h2>
+            <p class="quiz-question">1. يشكل النفط المصدر الرئيسي للدخل في معظم دول الخليج العربي.</p>
+            <div class="quiz-buttons">
+                <button onclick="checkAnswer(true, 1)">صح</button>
+                <button onclick="checkAnswer(false, 1)">خطأ</button>
+            </div>
+            
+            <p class="quiz-question">2. الزراعة تعتبر القطاع الأهم في كل الدول العربية.</p>
+            <div class="quiz-buttons">
+                <button onclick="checkAnswer(false, 2)">صح</button>
+                <button onclick="checkAnswer(true, 2)">خطأ</button>
+            </div>
+            
+            <p class="quiz-question">3. السياحة تساهم في تنويع الاقتصاد العربي وجذب الاستثمار الأجنبي.</p>
+            <div class="quiz-buttons">
+                <button onclick="checkAnswer(true, 3)">صح</button>
+                <button onclick="checkAnswer(false, 3)">خطأ</button>
+            </div>
+
+            <p class="quiz-question">4. تعتبر التكنولوجيا من المجالات غير الهامة في الوطن العربي.</p>
+            <div class="quiz-buttons">
+                <button onclick="checkAnswer(false, 4)">صح</button>
+                <button onclick="checkAnswer(true, 4)">خطأ</button>
+            </div>
+
+            <p class="quiz-question">5. التجارة الدولية تسهم في نمو اقتصادات الدول العربية.</p>
+            <div class="quiz-buttons">
+                <button onclick="checkAnswer(true, 5)">صح</button>
+                <button onclick="checkAnswer(false, 5)">خطأ</button>
+            </div>
+
+            <p class="quiz-question">6. معظم الدول العربية تعتمد على الزراعة كأهم مصدر للدخل.</p>
+            <div class="quiz-buttons">
+                <button onclick="checkAnswer(false, 6)">صح</button>
+                <button onclick="checkAnswer(true, 6)">خطأ</button>
+            </div>
+
+            <p class="quiz-question">7. الصناعة النفطية هي الأكثر ربحًا في الدول العربية الغنية بالنفط.</p>
+            <div class="quiz-buttons">
+                <button onclick="checkAnswer(true, 7)">صح</button>
+                <button onclick="checkAnswer(false, 7)">خطأ</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 بواسطة Rayan Rinoo</p>
+    </div>
+
+    <script>
+        function showContent(contentId) {
+            document.querySelectorAll('.content').forEach(function(content) {
+                content.style.display = 'none';
+            });
+            document.getElementById(contentId).style.display = 'block';
+        }
+
+        function checkAnswer(isCorrect, questionNumber) {
+            if (isCorrect) {
+                alert("إجابة صحيحة للسؤال " + questionNumber + "!");
+            } else {
+                alert("إجابة خاطئة للسؤال " + questionNumber + "، حاول مرة أخرى.");
+            }
+        }
+    </script>
+
+</body>
+</html>
